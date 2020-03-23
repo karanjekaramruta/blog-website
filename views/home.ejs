@@ -1,0 +1,11 @@
+<%- include('partials/header'); %> <!--this line will include header which is created as part of header.js -->
+<h1>Home</h1>
+<p><%= posts[0].homeStartingContent%></p>
+
+<% posts.forEach(function(post){ %>
+    <h1><%=post.title%></h1>
+    <p><%=post.text%></p>
+    <a href="/posts/<%=post.title%>">Read More</a>
+<%})%>
+
+<%- include('partials/footer'); %>
